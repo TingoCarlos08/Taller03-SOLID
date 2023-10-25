@@ -1,5 +1,11 @@
-public class LogInAdmin extends LogIn {
+public class LogInAdmin extends LogInterface {
     private boolean userIsAdmin;
+    UserService userService;
+
+    public LogInAdmin(UserService userService) {
+        this.userService=usrService;
+    }
+    
     @Override
     public void log (User user) {
         this.userIsAdmin = verifyIfTheUserIsAdmin(user);
